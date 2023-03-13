@@ -1,8 +1,8 @@
 package config
 
 import(
-	"github.co/jinzhu/gorm"
-	_"github.com/jinzhu/gorm/dialects/sqlite"
+	"gorm.io/gorm"
+	_"gorm.io/gorm/sqlite"
 )
 
 var (
