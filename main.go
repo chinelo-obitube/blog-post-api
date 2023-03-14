@@ -36,7 +36,9 @@ func main() {
 }
 defer db.Close()
 
-  db.AutoMigrate(&BlogPost{})
+  db.AutoMigrate(&BlogPost{}, &Category{}, &User{})
+
+	return db
 }
 
 router := gin.Default()
