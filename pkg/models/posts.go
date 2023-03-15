@@ -42,20 +42,20 @@ func (b *BlogPost) CreatePost() *BlogPost {
 	return b
 }
 
-func GetAllBooks() []Book{
-	var Books []Book
-	db.Find(&Books)
-	return Books
+func GetAllPosts() []BlogPost{
+	var Posts []BlogPost
+	db.Find(&Posts)
+	return Posts
 }
 
-func GetBookById(Id int64) (*Book, *gorm.DB){
-	var getBook Book
-	db := db.Where("ID=?", Id).Find(&getBook)
-	return &getBook, db
+func GetPostById(Id int64) (*BlogPost, *gorm.DB){
+	var getPost BlogPost
+	db := db.Where("ID=?", Id).Find(&getPost)
+	return &getPost, db
 }
 
-func DeleteBook(ID int64) []Book{
-	var Books []Book
-	db.Find(&Books)
-	return Books
+func DeletePost(ID int64) []BlogPost{
+	var Posts []BlogPost
+	db.Find(&Posts)
+	return Posts
 }
